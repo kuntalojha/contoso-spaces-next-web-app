@@ -26,5 +26,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: static-site
-    - name: Test artifact download
-      run: ls -R
+    - name: Archive site content
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        filename: site.zip
